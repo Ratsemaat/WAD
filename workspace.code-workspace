@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\Prac3\\wad21-lab3"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "06-Modal",
+    "git.ignoreLimitWarning": true
+  }
+}
