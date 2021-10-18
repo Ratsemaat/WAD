@@ -1,0 +1,22 @@
+{
+    "profile_picture": "https://i.pinimg.com/originals/8b/1/7a/8b167af653c2399dd93b952a48740620.jpg",
+    "profile_name": "John Doe",
+    "mail_address": "john.doe@example.com",
+    "posts": [
+        {
+            "title": "I think it's going to rain",
+            "img_link":"https://i.imgur.com/JGwvZyW.jpg",
+            "profile_picture":"https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png"
+        },
+        {
+            "title": "Which weighs more, a pound of feathers or a pound of bricks",
+            "img_link": "None",
+            "profile_picture":"https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png"
+        },
+         {
+            "title": "Felt cute, might delete later",
+            "img_link":"https://myneatstuff.ca/store/img/batman/arkhamcity.jpg",
+            "profile_picture":"https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png"
+        }
+    ]
+}   
