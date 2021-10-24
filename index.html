@@ -3,6 +3,16 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="styles.css">
+        <script>
+            function myFunction() {
+                var x = document.getElementById("drop");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!--<script src="index.js"></script> -->
         <script type="module" src="./local.js"></script>
@@ -19,10 +29,21 @@
                     <input type="text"><button>Search</button>
                 </div>
                 <div class="login">
-                    <img src="https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png" style="max-width: 3em; max-height: 3em; padding-top: 0.25em;"  />
+                    <img onclick="myFunction()" src="https://studiolorier.com/wp-content/uploads/2018/10/Profile-Round-Sander-Lorier.jpg" style="max-width: 3em; max-height: 3em; padding-top: 0.25em;"  />
                 </div>
-
             </div>
+            <div class="dropdown" id="drop"> 
+                <div class="space">
+                </div>
+                <div class="visible">
+                    <div class="box">
+                        <p1>John Doe</p1>
+                        <br>
+                        <p1>john.doe@example.com</p1>
+                    </div>
+
+                </div>    
+            </div>  
             <div class="page">
                 <div id= "post-list">
                     <!--
