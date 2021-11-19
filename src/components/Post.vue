@@ -8,8 +8,13 @@
         <img :src="data.img_link"/>
     </div>
     <p>{{ data.title }}</p>
-        <img src="https://w7.pngwing.com/pngs/440/84/png-transparent-white-and-blue-thumbs-up-logo-facebook-like-button-computer-icons-free-s-like-button-miscellaneous-text-hand.png"
-    />
+    <div class="like-container">
+      <button class="like-btn" type="submit" style="background: transparent" v-on:click="increaseLike">
+        <img class="like-btn-img"
+             src="https://w7.pngwing.com/pngs/440/84/png-transparent-white-and-blue-thumbs-up-logo-facebook-like-button-computer-icons-free-s-like-button-miscellaneous-text-hand.png"/>
+      </button>
+      <p class="like-number">{{data.numberOfLikes}}</p>
+    </div>
   </div>
 </template>
 <script>
@@ -17,6 +22,11 @@ export default {
   name: "post",
   props: ["data"],
   components: {},
+  methods: {
+    increaseLike: function () {
+      this.data.numberOfLikes++;
+    },
+  }
 };
 </script> 
  
@@ -32,13 +42,31 @@ export default {
 }
 
 
-p ~ img {
-  max-width: 40px;
-  max-height: 40px;
-  padding: 10px;
-  padding-bottom: 20px;
+.like-btn-img {
+  height: 100%;
+  width: 100%;
 }
 
+.like-btn {
+  width: 5em;
+  height: 4em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding: 0;
+  border-radius: 1em;
+  border: transparent;
+}
+
+.like-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.like-number{
+  margin-left: 2em;
+  font-size: 1.2em;
+}
 .top-bar img {
   max-width: 40px;
   max-height: 40px;
