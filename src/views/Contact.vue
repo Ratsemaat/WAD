@@ -1,18 +1,20 @@
 <template> 
-    <div class="Contact">
-        <table id="contactlist">
-            <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-            </tr>
-            <tr v-for="contact in contacts" :key="contact.name">
-                <td>{{ contact.name  }}</td>
-                <td>{{ contact.phone}}</td>
-                <td>{{contact.email}}</td>
+    <div id="fill">
+        <div class="Contact">
+            <table id="contactlist">
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+                <tr v-for="contact in contacts" :key="contact.name">
+                    <td>{{ contact.name  }}</td>
+                    <td>{{ contact.phone}}</td>
+                    <td>{{contact.email}}</td>
 
-            </tr>
-        </table>
+                </tr>
+            </table>
+        </div>
     </div>
 </template> 
  
@@ -40,7 +42,7 @@
     display: flex;
     justify-content: center;
 
-    width: 100%;
+    width: 90%;
    }
   #contactList{
       text-align: center;
@@ -53,5 +55,8 @@
   }
   td{
     height: 50px;
+  }
+  #fill{
+      min-height: 96%;
   }
 </style> 

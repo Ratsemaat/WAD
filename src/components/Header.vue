@@ -65,7 +65,7 @@ export default {
 }
 #nav {
   text-align: center;
-
+  flex: 1.8;
   width: 20%;
   height: 3em;
   color: #ffffff;
@@ -75,7 +75,7 @@ export default {
 }
 
 #nav a {
-  width: 10%;
+  width: 20%;
   height: 3em;
   padding: 10px;
   margin-left: 4px;
@@ -88,20 +88,20 @@ export default {
 }
 
 .search-box {
-  flex: 6;
+  flex: 3;
   width: 100%;
   text-align: center;
   padding-top: 0.5em;
 }
 div.search-box input {
-  width: 30%;
+  width: 85%;
   height: 2.5em;
   font-size: medium;
   border: 1px solid gray;
   border-radius: 4px;
 }
 div.search-box button {
-  width: 10%;
+  width: 15%;
   height: 3em;
   font-size: medium;
   background: #195b96;
@@ -115,15 +115,14 @@ div.search-box button:hover {
   background: #012b50;
 }
 .logo {
-  flex:1;
+  flex: 0.2;
   text-align: left;
   vertical-align: middle;
   padding-top: 0.5em;
   padding-bottom: 2em;
-  padding-left: 1em;
 }
 .login {
-  flex:1;
+  flex:2;
   text-align: right;
   padding-right: 0.5em;
 }

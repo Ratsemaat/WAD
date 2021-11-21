@@ -55,6 +55,7 @@ export default {
 <style>
 .form {
   margin-top: 150px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   background: #ffffff;

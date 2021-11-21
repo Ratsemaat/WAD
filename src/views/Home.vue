@@ -49,13 +49,15 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
 .reset-btn {
   height: 4em;
   width: 8em;
   margin-bottom: 1em;
-  background: lightgreen;
+  background: #1D83B1;
+  color: white;
   border: none;
   border-radius: 2em;
 }
