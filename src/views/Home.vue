@@ -20,9 +20,7 @@ export default {
   },
   methods: {
     resetLikes: function () {
-      for (let i = 0; i < this.postList.length; i++) {
-        this.postList[i].numberOfLikes = 0;
-      }
+        this.$store.commit('nullify')
     }
   },
   computed: {

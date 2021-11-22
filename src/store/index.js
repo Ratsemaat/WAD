@@ -84,6 +84,18 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    increment (state, postId) {
+      // mutate state
+      state.postList.forEach(post => {
+          if(post.id === postId){
+            post.numberOfLikes =1+ post.numberOfLikes;
+          }
+      });
+    },
+    nullify (state) {
+        // mutate state
+        state.postList.forEach((i) => i.numberOfLikes=0);
+      }
   },
   getters:{}
 })

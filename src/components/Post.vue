@@ -9,7 +9,7 @@
     </div>
     <p>{{ data.title }}</p>
     <div class="like-container">
-      <button class="like-btn" type="submit" style="background: transparent" v-on:click="increaseLike">
+      <button class="like-btn" type="submit" style="background: transparent" v-on:click="increaseLike(data.id)">
         <img class="like-btn-img"
              src="https://w7.pngwing.com/pngs/440/84/png-transparent-white-and-blue-thumbs-up-logo-facebook-like-button-computer-icons-free-s-like-button-miscellaneous-text-hand.png"/>
       </button>
@@ -23,8 +23,8 @@ export default {
   props: ["data"],
   components: {},
   methods: {
-    increaseLike: function () {
-      this.data.numberOfLikes++;
+    increaseLike: function (postId) {
+      this.$store.commit('increment', postId)
     },
   }
 };
