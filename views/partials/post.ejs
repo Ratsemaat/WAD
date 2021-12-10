@@ -1,20 +1,19 @@
 
 <html>
-<a href = <%="/posts/"+post.id%>>
+
    <div class="post" >
       <div class="top-bar">
         <img src="<%= post.profile_picture %>">
-        <p class="date"><%= post.timestamp %> </p>
+        <p class="date"><%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date(post.timestamp)) %> </p>
       </div>
       <% if(post.image_link){ %>
         <div class="img-container">
           <img src="<%= post.image_url %>">
         </div>
       <% } %>
-      <p><%= post.title %> </p>
-</a>
+      <a href = <%="/posts/"+post.id%>><%= post.title %></a>
       <div class="like-container">
-        <button class="like-btn" onclick="addLike('<%= post.id %>', this), incrementLike('<%= post.id %>', this) ,this.disabled=true" type="button" style="background: transparent">
+        <button class="like-btn" onclick="addLike('<%= post.id %>', this),this.disabled=true" type="button" style="background: transparent">
           <img class="like-btn-img"
                src="https://w7.pngwing.com/pngs/440/84/png-transparent-white-and-blue-thumbs-up-logo-facebook-like-button-computer-icons-free-s-like-button-miscellaneous-text-hand.png"/>
         </button>
@@ -31,19 +30,15 @@
           method: 'PUT', 
         })
         .then(response => {
-
-            })
-
+          var postsLikes = document.getElementById(postId).dataset.value
+          postsLikes++;
+          document.getElementById(postId).innerText = postsLikes;
+        })
         .catch((error) => {
           console.error('Error:', error);
         });
   }
 
-  function incrementLike(id, post){
-    var postsLikes = document.getElementById(id).dataset.value
-    postsLikes++;
-    document.getElementById(id).innerText = postsLikes;
-  }
 
 
 
@@ -64,7 +59,11 @@
   .date {
     color: gray;
   }
-  
+
+  button:disabled{
+    filter: brightness(0.7);
+
+}
   
   .like-btn-img {
     height: 100%;
@@ -102,7 +101,7 @@
     margin-bottom: 20px;
     box-shadow: 0 0 10px 2px rgb(185, 185, 185);
   }
-  
+
   .img-container {
     max-width: 100%;
     max-height: 100%;
@@ -113,8 +112,10 @@
     max-height: 100%;
     min-width: 100%;
   }
-  .post > p {
+ 
+  .post>a {
     padding: 20px;
     font-size: 30px;
   }
+
   </style> 

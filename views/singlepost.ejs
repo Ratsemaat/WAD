@@ -11,7 +11,7 @@
           <div class="top-bar">
             <img src="<%= post.profile_picture %>">
             <p class="date">
-              <%= post.timestamp %>
+              <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date(post.timestamp)) %>
             </p>
           </div>
           <% if(post.image_link){ %>
