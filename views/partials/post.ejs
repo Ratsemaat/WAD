@@ -14,11 +14,11 @@
       <p><%= post.title %> </p>
 </a>
       <div class="like-container">
-        <button id="'<%= post.id %>'" class="like-btn" onclick="addLike('<%= post.id %>', this), incrementLike('<%= post.id %>') ,this.disabled=true" type="submit" style="background: transparent">
+        <button class="like-btn" onclick="addLike('<%= post.id %>', this), incrementLike('<%= post.id %>', this) ,this.disabled=true" type="button" style="background: transparent">
           <img class="like-btn-img"
                src="https://w7.pngwing.com/pngs/440/84/png-transparent-white-and-blue-thumbs-up-logo-facebook-like-button-computer-icons-free-s-like-button-miscellaneous-text-hand.png"/>
         </button>
-        <p class="like-number"><%= post.likes %> </p>
+        <p id="<%= post.id %>" data-value="<%= post.likes %>" class="like-number"><%= post.likes %> </p>
       </div>
     </div>
 </html>
@@ -39,9 +39,10 @@
         });
   }
 
-  function incrementLike(id){
-    let posts = document.getElementById('19')
-    console.log(posts);
+  function incrementLike(id, post){
+    var postsLikes = document.getElementById(id).dataset.value
+    postsLikes++;
+    document.getElementById(id).innerText = postsLikes;
   }
 
 
